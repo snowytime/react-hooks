@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"module": "NodeNext",
+		"moduleResolution": "NodeNext",
+		"target": "ES2020",
+		"sourceMap": true,
+		"jsx": "react",
+		"baseUrl": "src",
+		"rootDir": "src"
+	},
+	"include": ["./src/**/*"],
+	"exclude": ["node_modules"]
+}
