@@ -2,16 +2,23 @@ import React from "react";
 import { useScrollbarPreference } from "./useScrollPreference.js";
 
 /**
- * Ever wanted to stop scrolling?
- * -- oops layout shifts, and other gross things.
- * Well this solves that problem, it handles the scrollbars appropriately,
- * and handles the freezing of the screen.
- * Excellent for use in modals and drawers where we NEED to limit scrolling,
- * and ensure that it works on mobile.
- *
- * Requirements:
- * a. create the following css class
- */
+Ever wanted to stop scrolling?
+-- oops layout shifts, and other gross things.
+Well this solves that problem, it handles the scrollbars appropriately,
+and handles the freezing of the screen.
+Excellent for use in modals and drawers where we NEED to limit scrolling,
+and ensure that it works on mobile.
+
+Requirements:
+a. create the following css class
+
+.no-scroll {
+height: 100%;
+overflow: hidden
+}
+
+this class will be dynamically added to the body to lock in the scroll
+*/
 
 export const useStopScroll = (condition: boolean) => {
 	// gets the state of scrollbars existing
